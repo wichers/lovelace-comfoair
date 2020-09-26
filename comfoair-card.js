@@ -59,7 +59,7 @@ class ComfoAirCard extends LitElement {
 
   getAirFilterTmpl(){
     if(this.hass.states['binary_sensor.filter_full'].state != 'on'){
-      return html`<ha-icon icon="mdi:air-filter"></ha-icon>`;
+      return html`<ha-icon class="inactive" icon="mdi:air-filter"></ha-icon>`;
     }else{
       return html`<ha-icon class="warning" icon="mdi:air-filter"></ha-icon>`;
     }
