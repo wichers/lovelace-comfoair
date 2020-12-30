@@ -1,5 +1,5 @@
 # Homeassistant Lovelace Comfoair card
-This is a modified Lovelace Comfoair card to work with the ComfoAir Service https://github.com/adorobis/hacomfoairmqtt with MQTT Autodiscovery (Pull Request by: https://github.com/TimWeyand/hacomfoairmqtt) to visualize your data!
+This is a modified Lovelace Comfoair card to work with the ComfoAir Service https://github.com/adorobis/hacomfoairmqtt with MQTT Autodiscovery to visualize your data!
 
 ![Image](https://raw.githubusercontent.com/TimWeyand/lovelace-comfoair/master/result.png)
 
