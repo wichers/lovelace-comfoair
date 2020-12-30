@@ -1,8 +1,7 @@
 # Homeassistant Lovelace Comfoair card
+This is a modified Lovelace Comfoair card to work with the ComfoAir Service https://github.com/adorobis/hacomfoairmqtt with MQTT Autodiscovery (Pull Request by: https://github.com/TimWeyand/hacomfoairmqtt) to visualize your data!
 
-Use https://github.com/wichers/esphome-comfoair to connect your ComfoAir to Homeassistant and then use this lovelace card to visualize your data!
-
-![Image](https://raw.githubusercontent.com/wichers/lovelace-comfoair/master/result.png)
+![Image](https://raw.githubusercontent.com/TimWeyand/lovelace-comfoair/master/result.png)
 
 # Installation
 
@@ -13,8 +12,7 @@ resources:
   - type: module
     url: /local/lovelace-comfoair/comfoair-card.js
 ```
-* Add a card with `type: 'custom:comfoair-card'` and `entity: 'climate.put-your-comfoair-name-here'` to your UI.
+* Add a card with `type: 'custom:comfoair-card'` and `entity: 'climate.ca350_climate'` to your UI.
 * Restart home assistant
 * ???
 * Profit!
-
