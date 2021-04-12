@@ -14,25 +14,26 @@ class ComfoAirCard extends LitElement {
   }
 
   render() {
+    const temp_units = this.hass.states['sensor.outside_air'].attributes.unit_of_measurement;
     return html`
     <ha-card>
     <div class="container">
       <div class="bg">
           <div class="flex-container">
               <div class="flex-col-out">
-                  <div>${this.hass.states['sensor.outside_air'].state}°C</div>
+                  <div>${Math.round(this.hass.states['sensor.outside_air'].state)}${temp_units}</div>
                   <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon></ha-icon> ${Math.trunc(this.hass.states['sensor.fan_speed_supply'].state)} rpm</div>
-                  <div>${this.hass.states['sensor.exhaust_air'].state}°C</div>
+                  <div>${Math.round(this.hass.states['sensor.exhaust_air'].state)}${temp_units}</div>
                   <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon> ${Math.trunc(this.hass.states['sensor.fan_speed_exhaust'].state)} rpm</div>
               </div>
               <div class="flex-col-main">
-                  <div>${this.hass.states[this.config.entity].attributes.temperature}°C</div>
+                  <div>${Math.round(this.hass.states[this.config.entity].attributes.temperature)}${temp_units}</div>
                   <div><ha-icon class="spin" icon="mdi:${({'auto': 'fan', 'off': 'fan-off', low: 'fan-speed-1', medium: 'fan-speed-2', high: 'fan-speed-3'}[this.hass.states[this.config.entity].attributes.fan_mode])}"></ha-icon></div> 
               </div>
               <div class="flex-col-in">
-                  <div>${this.hass.states['sensor.return_air'].state}°C</div>
+                  <div>${Math.round(this.hass.states['sensor.return_air'].state)}${temp_units}</div>
                   <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.return_air_level'].state)}%</div>
-                  <div>${this.hass.states['sensor.supply_air'].state}°C</div>
+                  <div>${Math.round(this.hass.states['sensor.supply_air'].state)}${temp_units}</div>
                   <div class="fan-state"><ha-icon icon="mdi:fan"></ha-icon> ${Math.trunc(this.hass.states['sensor.supply_air_level'].state)}%</div>
               </div>
           </div>
