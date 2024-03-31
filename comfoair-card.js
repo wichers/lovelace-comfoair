@@ -23,7 +23,7 @@ class ComfoAirCard extends LitElement {
                   <div>${this.hass.states['sensor.comfoair_outside_air_temperature'].state}°C</div>
                   <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon></ha-icon> ${Math.trunc(this.hass.states['sensor.comfoair_intake_fan_speed_rpm'].state)} rpm</div>
                   <div>${this.hass.states['sensor.comfoair_exhaust_air_temperature'].state}°C</div>
-                  <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon> ${Math.trunc(this.hass.states['sensor.exhaust_fan_speed_rpm'].state)} rpm</div>
+                  <div class="fan-state"><ha-icon icon="mdi:speedometer"></ha-icon> ${Math.trunc(this.hass.states['sensor.comfoair_exhaust_fan_speed_rpm'].state)} rpm</div>
               </div>
               <div class="flex-col-main">
                   <div>${this.hass.states[this.config.entity].attributes.temperature}°C</div>
