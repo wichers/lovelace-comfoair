@@ -51,9 +51,9 @@ class ComfoAirCard extends LitElement {
 
   getFanTmpl(){
     if(this.hass.states['binary_sensor.comfoair_supply_fan_active'].state == 'on'){
-      return html`<ha-icon icon="mdi:fan"></ha-icon>`;
+      return html`<ha-icon title="Fan (on)"  icon="mdi:fan"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:fan"></ha-icon>`;
+      return html`<ha-icon title="Fan (off)" class="inactive" icon="mdi:fan"></ha-icon>`;
     }
   }
 
