@@ -51,41 +51,41 @@ class ComfoAirCard extends LitElement {
 
   getFanTmpl(){
     if(this.hass.states['binary_sensor.comfoair_supply_fan_active'].state == 'on'){
-      return html`<ha-icon icon="mdi:fan"></ha-icon>`;
+      return html`<ha-icon title="Fan (on)"  icon="mdi:fan"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:fan"></ha-icon>`;
+      return html`<ha-icon title="Fan (off)" class="inactive" icon="mdi:fan"></ha-icon>`;
     }
   }
 
   getAirFilterTmpl(){
     if(this.hass.states['sensor.comfoair_filter_status'].state == 'Full'){
-      return html`<ha-icon class="warning" icon="mdi:air-filter"></ha-icon>`;
+      return html`<ha-icon title="Filter (needs replacement)" class="warning" icon="mdi:air-filter"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:air-filter"></ha-icon>`;
+      return html`<ha-icon title="Filter (good condition)" class="inactive" icon="mdi:air-filter"></ha-icon>`;
     }
   }
 
   getBypassTmpl(){
     if(this.hass.states['binary_sensor.comfoair_bypass_valve_open'].state == 'on'){
-      return html`<ha-icon icon="mdi:electric-switch"></ha-icon>`;
+      return html`<ha-icon title="Bypass (open)" icon="mdi:electric-switch"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:electric-switch"></ha-icon>`;
+      return html`<ha-icon title="Bypass (closed)" class="inactive" icon="mdi:electric-switch"></ha-icon>`;
     }
   }
 
   getPreHeatTmpl(){
     if(this.hass.states['binary_sensor.comfoair_preheating_state'].state == 'on'){
-      return html`<ha-icon icon="mdi:radiator"></ha-icon>`;
+      return html`<ha-icon title="Preheating (on)" icon="mdi:radiator"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:radiator"></ha-icon>`;
+      return html`<ha-icon title="Preheating (off)" class="inactive" icon="mdi:radiator"></ha-icon>`;
     }
   }
 
   getSummerModeTmpl(){
     if(this.hass.states['binary_sensor.comfoair_summer_mode'].state == 'off'){
-      return html`<ha-icon icon="mdi:snowflake"></ha-icon>`;
+      return html`<ha-icon title="Summer Mode (on)" icon="mdi:snowflake"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:weather-sunny"></ha-icon>`;
+      return html`<ha-icon title="Summer Mode (off)" class="inactive" icon="mdi:weather-sunny"></ha-icon>`;
     }
   }
 
